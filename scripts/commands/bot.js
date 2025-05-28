@@ -62,7 +62,7 @@ module.exports = {
         var name = await Users.getNameUser(event.senderID);
         var rand = tl[Math.floor(Math.random() * tl.length)]
         return api.sendMessage({ 
-              body: `${name}, ${rand}`, 
+              body: `≪★${name}★≫,${rand}`, 
               mentions: [{ tag: name, id: event.senderID }] }, event.threadID, (error, info) => {
           if (error) {
             return api.sendMessage('An error occurred while processing your request. Please try again later.', event.threadID, event.messageID);
