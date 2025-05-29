@@ -23,18 +23,9 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
   var rand = tl[Math.floor(Math.random() * tl.length)];
 
 
-   if ((event.body.toLowerCase() == "kiss bot") || (event.body.toLowerCase() == "bot kiss me")) {
-     return api.sendMessage("   ", threadID);
-   };
-
 if ((event.body.toLowerCase() == "/sex") || (event.body.toLowerCase() == "/fuck")) {
 return api.sendMessage("           ~ now sex time fuck", threadID);
 };
-
-   if ((event.body.toLowerCase() == "bot ar bacca") || (event.body.toLowerCase() == "  ") ||
-      (event.body.toLowerCase() == "Bot er bacca")) {
-     return api.sendMessage("----        -", threadID);
-   };
 
    if ((event.body.toLowerCase() == "leave") || (event.body.toLowerCase() == "Bot left ne") ||
 (event.body.toLowerCase() == "chole ja") ||
