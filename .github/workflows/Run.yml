@@ -19,8 +19,11 @@ jobs:
         with:
           node-version: '16'
 
+      - name: Set Fontconfig Path (to avoid mtime warnings)
+        run: echo "FONTCONFIG_PATH=/tmp/fonts" >> $GITHUB_ENV
+
       - name: Install dependencies
         run: npm install
 
-      - name: Nayan-Bot
+      - name: Start Rakib-Bot
         run: npm start
