@@ -19,8 +19,13 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Set Fontconfig Path (to avoid mtime warnings)
-        run: echo "FONTCONFIG_PATH=/tmp/fonts" >> $GITHUB_ENV
+      - name: Create fake font config folder
+        run: |
+          mkdir -p /tmp/fonts
+          echo "<?xml version='1.0'?>" > /tmp/fonts/fonts.conf
+          echo "<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>" >> /tmp/fonts/fonts.conf
+          echo "<fontconfig></fontconfig>" >> /tmp/fonts/fonts.conf
+          echo "FONTCONFIG_PATH=/tmp/fonts" >> $GITHUB_ENV
 
       - name: Install dependencies
         run: npm install
