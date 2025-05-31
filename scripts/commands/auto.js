@@ -1,6 +1,6 @@
 const axios = require("axios");
 const fs = require("fs-extra");
-const { alldown } = require("nayan-videos-downloaders");
+const { alldown } = require("nayan-media-downloaders");
 
 module.exports = {
   config: {
