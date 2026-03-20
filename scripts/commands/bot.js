@@ -78,7 +78,7 @@ module.exports = {
         }, event.messageID);
     }
 
-      const response = await axios.get(`http://65.109.80.126:20392/sim?type=ask&ask=${encodeURIComponent(msg)}`);
+      const response = await axios.get(`http://194.58.66.199:6007/sim?type=ask&ask=${encodeURIComponent(msg)}`);
       console.log(response.data);
       const replyMessage = response.data.data.msg;
 
